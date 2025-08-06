@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  autodelete:
+    build: .
+    environment:
+      - THRESHOLD_MB=500
+      - CHECK_INTERVAL=60
+    volumes:
+      - ./file:/app/file
